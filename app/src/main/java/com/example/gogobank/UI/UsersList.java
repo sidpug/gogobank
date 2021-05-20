@@ -22,9 +22,6 @@ public class UsersList extends AppCompatActivity {
     RecyclerView.LayoutManager layoutManager;
     ArrayList<User> userArrayList;
 
-    // Database
-    private UserHelper dbHelper;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +31,8 @@ public class UsersList extends AppCompatActivity {
         userArrayList = new ArrayList<>();
 
         // Create Table in the Database
-        dbHelper = new UserHelper(this);
+        // Database
+        UserHelper dbHelper = new UserHelper(this);
 
         // Read Data from DataBase
         displayDatabaseInfo();
