@@ -1,4 +1,4 @@
-package com.example.basicbankingapp.DB;
+package com.example.gogobank.DB;
 
 import android.provider.BaseColumns;
 

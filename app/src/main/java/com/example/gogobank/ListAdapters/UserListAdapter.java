@@ -1,20 +1,18 @@
-package com.example.basicbankingapp.ListAdapters;
+package com.example.gogobank.ListAdapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.basicbankingapp.R;
-import com.example.basicbankingapp.Data.User;
-import com.example.basicbankingapp.UI.UserData;
+import com.example.gogobank.R;
+import com.example.gogobank.Data.User;
+import com.example.gogobank.UI.UserData;
 
 import java.util.ArrayList;
 

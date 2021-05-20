@@ -1,10 +1,10 @@
-package com.example.basicbankingapp.DB;
+package com.example.gogobank.DB;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import com.example.basicbankingapp.DB.TransactionContract.TransactionEntry;
+import com.example.gogobank.DB.TransactionContract.TransactionEntry;
 
 
 public class TransactionHelper extends SQLiteOpenHelper {

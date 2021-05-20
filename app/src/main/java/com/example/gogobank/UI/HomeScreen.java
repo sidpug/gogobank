@@ -1,4 +1,4 @@
-package com.example.basicbankingapp.UI;
+package com.example.gogobank.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.basicbankingapp.R;
+import com.example.gogobank.R;
 
 public class HomeScreen extends AppCompatActivity {
 

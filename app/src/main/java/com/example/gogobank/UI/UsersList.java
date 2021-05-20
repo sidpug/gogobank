@@ -1,27 +1,18 @@
-package com.example.basicbankingapp.UI;
+package com.example.gogobank.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.ContentValues;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteException;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.basicbankingapp.DB.TransactionContract;
-import com.example.basicbankingapp.DB.UserContract;
-import com.example.basicbankingapp.DB.UserHelper;
-import com.example.basicbankingapp.Data.User;
-import com.example.basicbankingapp.ListAdapters.UserListAdapter;
-import com.example.basicbankingapp.R;
-import com.example.basicbankingapp.DB.UserContract.UserEntry;
+import com.example.gogobank.DB.UserHelper;
+import com.example.gogobank.Data.User;
+import com.example.gogobank.ListAdapters.UserListAdapter;
+import com.example.gogobank.R;
+import com.example.gogobank.DB.UserContract.UserEntry;
 
-import java.text.NumberFormat;
 import java.util.ArrayList;
 
 public class UsersList extends AppCompatActivity {
@@ -40,7 +31,7 @@ public class UsersList extends AppCompatActivity {
         setContentView(R.layout.activity_users_list);
 
         // Create ArrayList of Users
-        userArrayList = new ArrayList<User>();
+        userArrayList = new ArrayList<>();
 
         // Create Table in the Database
         dbHelper = new UserHelper(this);

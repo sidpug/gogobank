@@ -1,11 +1,9 @@
-package com.example.basicbankingapp.UI;
+package com.example.gogobank.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -13,16 +11,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.basicbankingapp.DB.TransactionContract;
-import com.example.basicbankingapp.DB.TransactionHelper;
-import com.example.basicbankingapp.DB.UserContract;
-import com.example.basicbankingapp.DB.UserHelper;
-import com.example.basicbankingapp.Data.Transaction;
-import com.example.basicbankingapp.Data.User;
-import com.example.basicbankingapp.ListAdapters.TransactionHistoryAdapter;
-import com.example.basicbankingapp.R;
+import com.example.gogobank.DB.TransactionContract;
+import com.example.gogobank.DB.TransactionHelper;
+import com.example.gogobank.Data.Transaction;
+import com.example.gogobank.ListAdapters.TransactionHistoryAdapter;
+import com.example.gogobank.R;
 
-import java.text.NumberFormat;
 import java.util.ArrayList;
 
 public class TransactionHistory extends AppCompatActivity {

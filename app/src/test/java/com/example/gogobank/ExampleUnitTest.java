@@ -1,4 +1,4 @@
-package com.example.basicbankingapp;
+package com.example.gogobank;
 
 import org.junit.Test;
 

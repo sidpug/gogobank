@@ -1,4 +1,4 @@
-package com.example.basicbankingapp.ListAdapters;
+package com.example.gogobank.ListAdapters;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -12,8 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.basicbankingapp.Data.Transaction;
-import com.example.basicbankingapp.R;
+import com.example.gogobank.Data.Transaction;
+import com.example.gogobank.R;
 
 import java.util.ArrayList;
 

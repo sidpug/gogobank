@@ -1,12 +1,10 @@
-package com.example.basicbankingapp.UI;
+package com.example.gogobank.UI;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,9 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.basicbankingapp.DB.TransactionContract;
-import com.example.basicbankingapp.DB.TransactionHelper;
-import com.example.basicbankingapp.R;
+import com.example.gogobank.R;
 
 public class UserData extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.basicbankingapp.Data;
+package com.example.gogobank.Data;
 
 public class User {
     private String name;
