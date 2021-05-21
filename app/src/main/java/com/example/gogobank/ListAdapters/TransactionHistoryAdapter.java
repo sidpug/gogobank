@@ -18,13 +18,13 @@ import com.example.gogobank.R;
 import java.util.ArrayList;
 
 public class TransactionHistoryAdapter extends RecyclerView.Adapter<TransactionHistoryAdapter.ViewHolder> {
-    private ArrayList<Transaction> transactionArrayList;
+    private final ArrayList<Transaction> transactionArrayList;
 
     public TransactionHistoryAdapter(Context context, ArrayList<Transaction> list) {
         transactionArrayList = list;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView fromName, toName, amountTransferred, date, time;
         CardView cardView;
         LinearLayout toUserInfo;

@@ -41,7 +41,7 @@ public class TransactionHelper extends SQLiteOpenHelper {
         }
     }
 
-    public boolean insertTransferData (String fromName, String toName, String amount, int status) {
+    public void insertTransferData (String fromName, String toName, String amount, int status) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
@@ -51,11 +51,5 @@ public class TransactionHelper extends SQLiteOpenHelper {
         contentValues.put(TransactionEntry.COLUMN_STATUS, status);
         Long result = db.insert(TransactionEntry.TABLE_NAME, null, contentValues);
 
-        if (result == -1) {
-            return false;
-        }
-        else {
-            return true;
-        }
     }
 }

@@ -18,13 +18,13 @@ import java.util.ArrayList;
 
 public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ViewHolder> {
 
-    private ArrayList<User> userArrayList;
+    private final ArrayList<User> userArrayList;
 
     public UserListAdapter(Context context, ArrayList<User> list) {
         userArrayList = list;
     }
 
-    public  class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView userName, userAccountBalance;
 
         public ViewHolder(@NonNull View itemView) {

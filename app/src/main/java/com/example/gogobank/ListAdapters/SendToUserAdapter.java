@@ -14,8 +14,8 @@ import com.example.gogobank.R;
 import java.util.ArrayList;
 
 public class SendToUserAdapter extends RecyclerView.Adapter<SendToUserAdapter.ViewHolder> {
-    private ArrayList<User> userArrayList;
-    private OnUserListener onUserListener;
+    private final ArrayList<User> userArrayList;
+    private final OnUserListener onUserListener;
 
     public SendToUserAdapter(ArrayList<User> userArrayList, OnUserListener onUserListener) {
         this.userArrayList = userArrayList;
@@ -26,7 +26,7 @@ public class SendToUserAdapter extends RecyclerView.Adapter<SendToUserAdapter.Vi
     @Override
     public SendToUserAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
         View view = LayoutInflater.from (viewGroup.getContext()).inflate(R.layout.user_list_item, viewGroup, false);
-        return new SendToUserAdapter.ViewHolder(view, onUserListener);
+        return new ViewHolder(view, onUserListener);
     }
 
     @Override
@@ -41,7 +41,7 @@ public class SendToUserAdapter extends RecyclerView.Adapter<SendToUserAdapter.Vi
         return userArrayList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView userName, userAccountBalance;
         OnUserListener onUserListener;
 
