@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -64,7 +65,8 @@ public class UserData extends AppCompatActivity {
         View mView = getLayoutInflater().inflate(R.layout.dialog_box, null);
         mBuilder.setTitle("Enter Amount").setView(mView).setCancelable(false);
 
-        final EditText mAmount = (EditText) mView.findViewById(R.id.enter_money);
+        final EditText mAmount =  mView.findViewById(R.id.enter_money);
+        mAmount.setFilters(new InputFilter[] {new InputFilter.LengthFilter(6)});
         mBuilder.setPositiveButton("SEND", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) { }
