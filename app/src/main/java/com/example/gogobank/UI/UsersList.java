@@ -30,9 +30,6 @@ public class UsersList extends AppCompatActivity {
         // Create ArrayList of Users
         userArrayList = new ArrayList<>();
 
-        // Create Table in the Database
-        // Database
-        UserHelper dbHelper = new UserHelper(this);
 
         // Read Data from DataBase
         displayDatabaseInfo();
