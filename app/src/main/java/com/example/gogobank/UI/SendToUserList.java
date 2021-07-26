@@ -112,25 +112,22 @@ public class SendToUserList extends AppCompatActivity implements SendToUserAdapt
     public void onBackPressed() {
         AlertDialog.Builder builder_exitButton = new AlertDialog.Builder(SendToUserList.this);
         builder_exitButton.setTitle("Do you want to cancel the transaction?").setCancelable(false)
-                .setPositiveButton ("yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick (DialogInterface dialogInterface, int i) {
-                        // Transactions Cancelled
-                        TransactionHelper dbHelper = new TransactionHelper(getApplicationContext());
-                        SQLiteDatabase db = dbHelper.getWritableDatabase();
-                        ContentValues values = new ContentValues();
+                .setPositiveButton ("yes", (dialogInterface, i) -> {
+                    // Transactions Cancelled
+                    TransactionHelper dbHelper = new TransactionHelper(getApplicationContext());
+                    SQLiteDatabase db = dbHelper.getWritableDatabase();
+                    ContentValues values = new ContentValues();
 
-                        values.put(TransactionEntry.COLUMN_FROM_NAME, fromUserAccountName);
-                        values.put(TransactionEntry.COLUMN_TO_NAME, toUserAccountName);
-                        values.put(TransactionEntry.COLUMN_STATUS, 0);
-                        values.put(TransactionEntry.COLUMN_AMOUNT, transferAmount);
+                    values.put(TransactionEntry.COLUMN_FROM_NAME, fromUserAccountName);
+                    values.put(TransactionEntry.COLUMN_TO_NAME, toUserAccountName);
+                    values.put(TransactionEntry.COLUMN_STATUS, 0);
+                    values.put(TransactionEntry.COLUMN_AMOUNT, transferAmount);
 
-                        db.insert(TransactionEntry.TABLE_NAME, null, values);
+                    db.insert(TransactionEntry.TABLE_NAME, null, values);
 
-                        Toast.makeText(SendToUserList.this, "Transaction Cancelled!", Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(SendToUserList.this, UsersList.class));
-                        finish();
-                    }
+                    Toast.makeText(SendToUserList.this, "Transaction Cancelled!", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(SendToUserList.this, UsersList.class));
+                    finish();
                 }).setNegativeButton("No", null);
         AlertDialog alertExit = builder_exitButton.create();
         alertExit.show();

@@ -80,25 +80,22 @@ public class UserData extends AppCompatActivity {
 
         dialog = mBuilder.create();
         dialog.show();
-        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Checking whether amount entered is correct or not
-                int currentBalance = Integer.parseInt(String.valueOf(balance.getText()));
+        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(view -> {
+            // Checking whether amount entered is correct or not
+            int currentBalance = Integer.parseInt(String.valueOf(balance.getText()));
 
-                if (mAmount.getText().toString().isEmpty()) {
-                    mAmount.setError("Amount can't be empty");
-                } else if (Integer.parseInt(mAmount.getText().toString()) > currentBalance){
-                    mAmount.setError("Your account don't have enough balance");
-                } else {
-                    Intent intent = new Intent(UserData.this, SendToUserList.class);
-                    intent.putExtra("FROM_USER_ACCOUNT_NO", Integer.parseInt(accountNo.getText().toString()));    // PRIMARY_KEY
-                    intent.putExtra("FROM_USER_NAME", name.getText());
-                    intent.putExtra("FROM_USER_ACCOUNT_BALANCE", balance.getText());
-                    intent.putExtra("TRANSFER_AMOUNT", mAmount.getText().toString());
-                    startActivity(intent);
-                    finish();
-                }
+            if (mAmount.getText().toString().isEmpty()) {
+                mAmount.setError("Amount can't be empty");
+            } else if (Integer.parseInt(mAmount.getText().toString()) > currentBalance){
+                mAmount.setError("Your account don't have enough balance");
+            } else {
+                Intent intent = new Intent(UserData.this, SendToUserList.class);
+                intent.putExtra("FROM_USER_ACCOUNT_NO", Integer.parseInt(accountNo.getText().toString()));    // PRIMARY_KEY
+                intent.putExtra("FROM_USER_NAME", name.getText());
+                intent.putExtra("FROM_USER_ACCOUNT_BALANCE", balance.getText());
+                intent.putExtra("TRANSFER_AMOUNT", mAmount.getText().toString());
+                startActivity(intent);
+                finish();
             }
         });
     }
