@@ -67,10 +67,7 @@ public class UserData extends AppCompatActivity {
 
         final EditText mAmount =  mView.findViewById(R.id.enter_money);
         mAmount.setFilters(new InputFilter[] {new InputFilter.LengthFilter(6)});
-        mBuilder.setPositiveButton("SEND", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) { }
-                                    }).setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+        mBuilder.setPositiveButton("SEND", (dialogInterface, i) -> { }).setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
